@@ -16,5 +16,34 @@ namespace ChatProgram
         {
             InitializeComponent();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Btn_1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            {
+               Add_Txt.Visible = true;
+            }
+
+        }
+
+        private void insert_Text_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Contacten_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

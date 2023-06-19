@@ -1,0 +1,11 @@
+C:\Users\mlmna\source\repos\ChatProgram\bin\Debug\ChatProgram.exe.config
+C:\Users\mlmna\source\repos\ChatProgram\bin\Debug\ChatProgram.exe
+C:\Users\mlmna\source\repos\ChatProgram\bin\Debug\ChatProgram.pdb
+C:\Users\mlmna\source\repos\ChatProgram\obj\Debug\ChatProgram.csproj.AssemblyReference.cache
+C:\Users\mlmna\source\repos\ChatProgram\obj\Debug\ChatProgram.csproj.SuggestedBindingRedirects.cache
+C:\Users\mlmna\source\repos\ChatProgram\obj\Debug\ChatProgram.Form1.resources
+C:\Users\mlmna\source\repos\ChatProgram\obj\Debug\ChatProgram.Properties.Resources.resources
+C:\Users\mlmna\source\repos\ChatProgram\obj\Debug\ChatProgram.csproj.GenerateResource.cache
+C:\Users\mlmna\source\repos\ChatProgram\obj\Debug\ChatProgram.csproj.CoreCompileInputs.cache
+C:\Users\mlmna\source\repos\ChatProgram\obj\Debug\ChatProgram.exe
+C:\Users\mlmna\source\repos\ChatProgram\obj\Debug\ChatProgram.pdb
