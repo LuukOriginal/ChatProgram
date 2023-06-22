@@ -60,6 +60,13 @@ namespace ChatProgram
             {
                 MessageBox.Show("Logged in to user with id:" + Properties.Settings.Default.UserId);
             }
+
+            DateTime curTime = DateTime.Now;
+
+            newMessage("Hallo John!", curTime.AddSeconds(-20), true);
+            newMessage("Oh hallo Bob!", curTime.AddSeconds(-15));
+            newMessage("Hoe gaat het?", curTime.AddSeconds(-10), true);
+            newMessage("Prima joh", curTime.AddSeconds(-5));
         }
 
         private void Add_Btn_Click(object sender, EventArgs e)
@@ -91,14 +98,56 @@ namespace ChatProgram
         }
 
 
-        private void SentMessage(string message, int time)
+        private void newMessage(string message, DateTime time, bool isClient = false)
         {
+            message = $"{time.ToString("HH:mm")} - {message}";
             Panel MessageContainer = new Panel();
-            MessagePanel.Controls.Add(MessageContainer);
+            MessageWindow.Controls.Add(MessageContainer);
+            MessageWindow.Controls.SetChildIndex(MessageContainer, 0);
             MessageContainer.Dock = DockStyle.Top;
-            MessageContainer.Size = new Size(0,55);
-            MessageContainer.BackColor = Color.White;
-            Panel Message = new Panel();
+            MessageContainer.Height = 55;
+
+            Panel MessagePanel = new Panel();
+            MessageContainer.Controls.Add(MessagePanel);
+            MessagePanel.Dock = isClient ? DockStyle.Left : DockStyle.Right;
+            MessagePanel.BackColor = isClient ? Color.FromArgb(31, 38, 45) : Color.FromArgb(38, 39, 46);
+
+            TextBox Message = new TextBox();
+            MessagePanel.Controls.Add(Message);
+            Message.Multiline = true;
+            Message.Text = message;
+            Message.ForeColor = isClient ? Color.FromArgb(112, 192, 175) : Color.Gainsboro;
+            Message.BorderStyle = BorderStyle.None;
+            Message.ReadOnly = true;
+            Message.BackColor = Message.Parent.BackColor;
+
+            Size textBounds = TextRenderer.MeasureText(message, Message.Font);
+            MessageContainer.Height = textBounds.Height + 10;
+            MessagePanel.Width = textBounds.Width + 10;
+            Message.Size = textBounds;
+
+            Message.Location = new Point(Message.Location.X + 5, Message.Location.Y + 5);
+
+            Panel EmptySpace = new Panel();
+            EmptySpace.Dock = DockStyle.Top;
+            EmptySpace.Height = 5;
+            MessageWindow.Controls.Add(EmptySpace);
+            MessageWindow.Controls.SetChildIndex(EmptySpace, 0);
+
+            Tooltip.SetToolTip(Message, time.ToString());
+        }
+
+        private void MessageInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                e.Handled = true;
+                if(MessageInput.Text.Replace(" ", string.Empty).Length > 0)
+                {
+                    newMessage(MessageInput.Text, DateTime.Now, true);
+                    MessageInput.Clear();
+                }
+            }
         }
     }
 }
