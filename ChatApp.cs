@@ -1,4 +1,5 @@
 ﻿using ChatProgram.Handlers;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ChatProgram
 {
@@ -21,15 +23,46 @@ namespace ChatProgram
             InitializeComponent();
         }
 
+        class User
+        {
+            public string _id;
+            public string username;
+        }
+
         private void ChatApp_Load(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.UserId == string.Empty)
             {
                 //First time use (send post request to server to create new user)
-                string UserId = Api.CreateUser("LuukOriginal");
-                Properties.Settings.Default.UserId = UserId;
+                string userId;
+                while (true)
+                {
+                    string userName = "";
+                    if (InputBox("Setup", "Choose a username:", ref userName) == DialogResult.OK)
+                    {
+                        if (userName.Replace(" ", string.Empty) == string.Empty) continue;
+
+                        string userRaw = Api.GetUser(userName);
+                        User user = JsonConvert.DeserializeObject<User>(userRaw);
+
+                        if(user._id != null)
+                        {
+                            userId = user._id;
+                        }
+                        else
+                        {
+                            userId = Api.CreateUser(userName);
+                        }
+
+                        break;
+                    }
+                }
+
+                MessageBox.Show("LOGGED IN: " + userId);
+
+                Properties.Settings.Default.UserId = userId;
                 Properties.Settings.Default.Save();
-                MessageBox.Show("Account Created!");
+
             }
             else
             {
@@ -59,5 +92,9 @@ namespace ChatProgram
             return dialogResult;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Reset();
+        }
     }
 }

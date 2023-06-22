@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-
+using System.Web;
 
 namespace ChatProgram.Handlers
 {
@@ -17,7 +17,12 @@ namespace ChatProgram.Handlers
         {
             string jsonString = JsonConvert.SerializeObject(new { username = username });
 
-            return requests.Post("/User", jsonString, jsonContent);
+            return requests.Post("/user", jsonString, jsonContent);
+        }
+
+        public string GetUser(string username)
+        {
+            return requests.Get("/user?username=" + HttpUtility.UrlEncode(username));
         }
     }
 }
