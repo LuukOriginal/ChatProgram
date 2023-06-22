@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace ChatProgram
 {
@@ -86,6 +87,18 @@ namespace ChatProgram
         private void button1_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Reset();
+            Application.Exit();
+        }
+
+
+        private void SentMessage(string message, int time)
+        {
+            Panel MessageContainer = new Panel();
+            MessagePanel.Controls.Add(MessageContainer);
+            MessageContainer.Dock = DockStyle.Top;
+            MessageContainer.Size = new Size(0,55);
+            MessageContainer.BackColor = Color.White;
+            Panel Message = new Panel();
         }
     }
 }
