@@ -39,3 +39,18 @@ C:\Users\Matt\Documents\GitHub\ChatProgram\obj\Debug\ChatProgram.csproj.CoreComp
 C:\Users\Matt\Documents\GitHub\ChatProgram\obj\Debug\ChatProgram.csproj.CopyComplete
 C:\Users\Matt\Documents\GitHub\ChatProgram\obj\Debug\ChatProgram.exe
 C:\Users\Matt\Documents\GitHub\ChatProgram\obj\Debug\ChatProgram.pdb
+D:\Development\C# Projects\ChatProgram\bin\Debug\ChatProgram.exe.config
+D:\Development\C# Projects\ChatProgram\bin\Debug\ChatProgram.exe
+D:\Development\C# Projects\ChatProgram\bin\Debug\ChatProgram.pdb
+D:\Development\C# Projects\ChatProgram\bin\Debug\Newtonsoft.Json.dll
+D:\Development\C# Projects\ChatProgram\bin\Debug\Newtonsoft.Json.xml
+D:\Development\C# Projects\ChatProgram\obj\Debug\ChatProgram.csproj.AssemblyReference.cache
+D:\Development\C# Projects\ChatProgram\obj\Debug\ChatProgram.csproj.SuggestedBindingRedirects.cache
+D:\Development\C# Projects\ChatProgram\obj\Debug\ChatProgram.ChatApp.resources
+D:\Development\C# Projects\ChatProgram\obj\Debug\ChatProgram.InputDialog.resources
+D:\Development\C# Projects\ChatProgram\obj\Debug\ChatProgram.Properties.Resources.resources
+D:\Development\C# Projects\ChatProgram\obj\Debug\ChatProgram.csproj.GenerateResource.cache
+D:\Development\C# Projects\ChatProgram\obj\Debug\ChatProgram.csproj.CoreCompileInputs.cache
+D:\Development\C# Projects\ChatProgram\obj\Debug\ChatProgram.csproj.CopyComplete
+D:\Development\C# Projects\ChatProgram\obj\Debug\ChatProgram.exe
+D:\Development\C# Projects\ChatProgram\obj\Debug\ChatProgram.pdb

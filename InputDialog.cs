@@ -22,12 +22,12 @@ namespace ChatProgram
 
         private void InputDialog_FormClosing(object sender, FormClosingEventArgs e)
         {
-            inputText = DialogInput.Text;
+            inputText = DialogInput.Text; //Sets the value of the result
         }
 
         private void DialogInput_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && onlyNumber)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && onlyNumber) //Only allows numbers, if needed
             {
                 e.Handled = true;
             }

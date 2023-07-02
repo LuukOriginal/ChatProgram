@@ -13,7 +13,8 @@ namespace ChatProgram.Handlers
             requests = new RequestHandler(BaseUrl);
         }
 
-        public string CreateUser(string username)
+        //Creates a simple function to send a request to a specific endpoint
+        public string CreateUser(string username) 
         {
             string jsonString = JsonConvert.SerializeObject(new { username = username });
 

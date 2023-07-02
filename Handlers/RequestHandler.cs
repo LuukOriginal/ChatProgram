@@ -17,20 +17,20 @@ namespace ChatProgram.Handlers
             this.baseUrl = BaseUrl;
         }
 
-        public string Get(string uri)
+        public string Get(string uri) //Handles GET requests
         {
             string responseBody = "";
 
             try
             {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(baseUrl + uri);
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(baseUrl + uri); //Send a simple HttpRequest
                 request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
 
                 using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                 using (Stream stream = response.GetResponseStream())
                 using (StreamReader reader = new StreamReader(stream))
                 {
-                    responseBody = reader.ReadToEnd();
+                    responseBody = reader.ReadToEnd(); //Reads the reponse and returns the result
                 }
             }
             catch (Exception ex)
@@ -41,7 +41,7 @@ namespace ChatProgram.Handlers
             return responseBody;
         }
 
-        public string Post(string uri, string data, string contentType, string method = "POST")
+        public string Post(string uri, string data, string contentType, string method = "POST") //Handles POST requests
         {
             string responseBody = "";
 
@@ -49,7 +49,7 @@ namespace ChatProgram.Handlers
             {
                 byte[] dataBytes = Encoding.UTF8.GetBytes(data);
 
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(baseUrl + uri);
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(baseUrl + uri); //Send a simple HttpRequest
                 request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
                 request.ContentLength = dataBytes.Length;
                 request.ContentType = contentType;
@@ -57,19 +57,19 @@ namespace ChatProgram.Handlers
 
                 using (Stream requestBody = request.GetRequestStream())
                 {
-                    requestBody.Write(dataBytes, 0, dataBytes.Length);
+                    requestBody.Write(dataBytes, 0, dataBytes.Length); //Add a body to the request
                 }
 
                 using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                 using (Stream stream = response.GetResponseStream())
                 using (StreamReader reader = new StreamReader(stream))
                 {
-                    responseBody = reader.ReadToEnd();
+                    responseBody = reader.ReadToEnd(); //Return the response of the request
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error");
+                MessageBox.Show(ex.Message, "Error"); //Show an error if something went wrong
                 return "";
             }
 

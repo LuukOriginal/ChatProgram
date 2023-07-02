@@ -50,8 +50,9 @@
             this.TopBar1.Controls.Add(this.Add_Btn);
             this.TopBar1.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopBar1.Location = new System.Drawing.Point(0, 0);
+            this.TopBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TopBar1.Name = "TopBar1";
-            this.TopBar1.Size = new System.Drawing.Size(874, 52);
+            this.TopBar1.Size = new System.Drawing.Size(583, 34);
             this.TopBar1.TabIndex = 0;
             // 
             // button1
@@ -60,9 +61,11 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(64)))), ((int)(((byte)(92)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(741, 10);
+            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button1.Location = new System.Drawing.Point(494, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 33);
+            this.button1.Size = new System.Drawing.Size(81, 21);
             this.button1.TabIndex = 1;
             this.button1.Text = "Logout";
             this.button1.UseVisualStyleBackColor = false;
@@ -73,9 +76,10 @@
             this.insert_Text.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.insert_Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.insert_Text.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.insert_Text.Location = new System.Drawing.Point(0, 52);
+            this.insert_Text.Location = new System.Drawing.Point(0, 34);
+            this.insert_Text.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.insert_Text.Name = "insert_Text";
-            this.insert_Text.Size = new System.Drawing.Size(200, 19);
+            this.insert_Text.Size = new System.Drawing.Size(133, 13);
             this.insert_Text.TabIndex = 0;
             this.insert_Text.Visible = false;
             // 
@@ -84,9 +88,11 @@
             this.Add_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(64)))), ((int)(((byte)(92)))));
             this.Add_Btn.FlatAppearance.BorderSize = 0;
             this.Add_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Add_Btn.Location = new System.Drawing.Point(12, 10);
+            this.Add_Btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Add_Btn.Location = new System.Drawing.Point(8, 6);
+            this.Add_Btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Add_Btn.Name = "Add_Btn";
-            this.Add_Btn.Size = new System.Drawing.Size(102, 36);
+            this.Add_Btn.Size = new System.Drawing.Size(68, 23);
             this.Add_Btn.TabIndex = 0;
             this.Add_Btn.Text = "Add Friend";
             this.Add_Btn.UseVisualStyleBackColor = false;
@@ -96,10 +102,9 @@
             // 
             this.Contacten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(43)))), ((int)(((byte)(54)))));
             this.Contacten.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Contacten.Location = new System.Drawing.Point(0, 52);
-            this.Contacten.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Contacten.Location = new System.Drawing.Point(0, 34);
             this.Contacten.Name = "Contacten";
-            this.Contacten.Size = new System.Drawing.Size(200, 433);
+            this.Contacten.Size = new System.Drawing.Size(133, 281);
             this.Contacten.TabIndex = 1;
             // 
             // panel1
@@ -107,10 +112,9 @@
             this.panel1.Controls.Add(this.MessageWindow);
             this.panel1.Controls.Add(this.MessageInput);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(200, 52);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(133, 34);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(674, 433);
+            this.panel1.Size = new System.Drawing.Size(450, 281);
             this.panel1.TabIndex = 2;
             // 
             // MessageWindow
@@ -119,10 +123,9 @@
             this.MessageWindow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(41)))));
             this.MessageWindow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MessageWindow.Location = new System.Drawing.Point(0, 0);
-            this.MessageWindow.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MessageWindow.Name = "MessageWindow";
-            this.MessageWindow.Padding = new System.Windows.Forms.Padding(10);
-            this.MessageWindow.Size = new System.Drawing.Size(674, 411);
+            this.MessageWindow.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.MessageWindow.Size = new System.Drawing.Size(450, 259);
             this.MessageWindow.TabIndex = 6;
             // 
             // MessageInput
@@ -132,24 +135,22 @@
             this.MessageInput.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.MessageInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.MessageInput.ForeColor = System.Drawing.Color.Gainsboro;
-            this.MessageInput.Location = new System.Drawing.Point(0, 411);
-            this.MessageInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MessageInput.Location = new System.Drawing.Point(0, 259);
             this.MessageInput.Name = "MessageInput";
-            this.MessageInput.Size = new System.Drawing.Size(674, 22);
+            this.MessageInput.Size = new System.Drawing.Size(450, 22);
             this.MessageInput.TabIndex = 5;
             this.MessageInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MessageInput_KeyPress);
             // 
             // ChatApp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.ClientSize = new System.Drawing.Size(874, 485);
+            this.ClientSize = new System.Drawing.Size(583, 315);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Contacten);
             this.Controls.Add(this.TopBar1);
             this.ForeColor = System.Drawing.Color.Black;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ChatApp";
             this.Text = "ChatProgram";
             this.Load += new System.EventHandler(this.ChatApp_Load);
